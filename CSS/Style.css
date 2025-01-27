@@ -5,7 +5,29 @@ Body {
 height: 600px;
 
 }
-
+.style{
+    color: black;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+    text-align: center;
+    font-style: normal;
+    text-transform: capitalize;
+} 
+.content{
+    align-items: center;
+}
+.content h3{
+    font-size: 30px;
+    text-align: center;
+}
+ .content p{ 
+    font-size: 15px;
+    text-align: center;
+}
+.oa{
+    text-align: center;
+}
 .container {
     background-image: url(/image/addisu.gif);
     border-radius: 20px;
