@@ -1,7 +1,28 @@
 Body {
     background-color: gray;
 }
-
+.style{
+    color: black;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+    text-align: center;
+    font-style: normal;
+    text-transform: capitalize;
+.content{
+    align-items: center;
+}
+.content h3{
+    font-size: 30px;
+    text-align: center;
+}
+ .content p{ 
+    font-size: 15px;
+    text-align: center;
+}
+.oa{
+    text-align: center;
+}
 .container {
     background-image: url(/image/addisu.gif);
     border-radius: 20px;
@@ -58,9 +79,43 @@ Body {
     width: 90px;
     height: 40px;
     border-radius: 20px;
+    background-color: greenyellow;
     box-shadow: 0 10 20px 0 orangered;
 }
 
 #button:hover {
     background-color: goldenrod;
+}
+
+.lab {
+    text-align: center;
+    color: greenyellow;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+
+    background-color: dodgerblue;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
