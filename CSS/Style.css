@@ -1,3 +1,36 @@
 Body {
     background-color: gray;
 }
+
+.container {
+    background-image: url(/image/addisu.gif);
+    border-radius: 20px;
+    color: goldenrod;
+    text-transform: capitalize;
+    left: 0;
+    text-align: center;
+
+
+
+
+}
+
+#add {
+    border-radius: 25px;
+    border: 4px solid green;
+    border-left-width: 20px;
+    border-left: 10px solid red;
+    border-top: 10px solid goldenrod;
+    border-right: 10px solid magenta;
+    border-bottom: 10px solid green;
+}
+
+#button {
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#button:hover {
+    background-color: goldenrod;
+}
