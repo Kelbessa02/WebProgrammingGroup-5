@@ -64,3 +64,36 @@ Body {
 #button:hover {
     background-color: goldenrod;
 }
+
+.lab {
+    text-align: center;
+    color: yellow;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+
+    background-color: dodgerblue;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
