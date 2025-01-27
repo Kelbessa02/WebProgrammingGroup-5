@@ -58,6 +58,7 @@ Body {
     width: 90px;
     height: 40px;
     border-radius: 20px;
+    background-color: greenyellow;
     box-shadow: 0 10 20px 0 orangered;
 }
 
@@ -67,7 +68,7 @@ Body {
 
 .lab {
     text-align: center;
-    color: yellow;
+    color: greenyellow;
     font-style: italic;
     text-transform: uppercase;
 }
