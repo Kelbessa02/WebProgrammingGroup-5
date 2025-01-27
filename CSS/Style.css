@@ -1,5 +1,9 @@
 Body {
     background-color: gray;
+#home{
+    background-image: url(../image/banner.jpg);
+height: 600px;
+
 }
 .style{
     color: black;
