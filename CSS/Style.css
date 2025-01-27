@@ -5,9 +5,9 @@ Body {
 .container {
     background-image: url(/image/addisu.gif);
     border-radius: 20px;
-    color: goldenrod;
-    text-transform: capitalize;
-    left: 0;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
     text-align: center;
 
 
@@ -25,10 +25,40 @@ Body {
     border-bottom: 10px solid green;
 }
 
+#FirstName {
+    border-radius: 10px;
+    width: 25%;
+    padding: 12px;
+    border: 5px solid darkgray;
+
+}
+
+#LastName {
+    border-radius: 10px;
+    width: 25%;
+    padding: 12px;
+    border: 5px solid orangered;
+}
+
+#email {
+    border-radius: 10px;
+    width: 25%;
+    padding: 12px;
+    border: 5px solid blue;
+}
+
+#phonenumber {
+    border-radius: 10px;
+    width: 25%;
+    padding: 12px;
+    border: 5px solid goldenrod;
+}
+
 #button {
     width: 90px;
     height: 40px;
     border-radius: 20px;
+    box-shadow: 0 10 20px 0 orangered;
 }
 
 #button:hover {
