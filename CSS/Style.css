@@ -50,6 +50,7 @@
   
   .logo {
       width: 45px;
+      border-radius: 50%;
   }
   
   .internal-wrapper {
@@ -72,8 +73,25 @@
       margin: 20px;
   }
   
+  .footer-wrapper {
+      width: 800px;
+      margin: 0 auto;
+  }
+  
   .internal-footer {
       display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+  }
+  
+  .copyright {
+      display: flex;
+      justify-content: end;
+      padding: 30px;
+  }
+  
+  .footer-logo {
+      width: 16px;
   }
   /*footer*/
   
