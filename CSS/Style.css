@@ -1,3 +1,4 @@
+
 /*general styling*/
 
 * {
@@ -112,6 +113,10 @@ footer {
 #about h2 {
     text-align: center;
 }
+.goal-section{
+background-color: #a34678;
+margin: 20px;
+}
 
 .style {
     color: black;
@@ -120,19 +125,34 @@ footer {
     font-size: 55px;
     text-align: center;
     font-style: normal;
+    margin-left: 100px;
+    
+    width: 75%;
     text-transform: capitalize;
 }
 
 .content {
+    
     align-items: center;
+    line-height: 1.5;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 2rem;
+    
+    
+
 }
 
 .content h3 {
     font-size: 30px;
     text-align: center;
+    text-decoration: dotted;
+    color: rgb(227, 211, 211);
 }
 
 .content p {
+    text-decoration-color: #f9f9f9;
+    text-decoration: dotted;
     font-size: 15px;
     text-align: center;
 }
