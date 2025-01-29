@@ -101,12 +101,14 @@ footer {
 #home {
   background-image: url(../image/banner.jpg);
   height: 500px; /*height of the viewport */
-  width: 100%; /*width of the viewport */
+  width: 97%; /*width of the viewport */
 
-  background-size: cover; /* This ensures the image covers the entire area */
+  background-size: cover; /*image covers the entire area */
   background-position: center center; /* Centers the image */
-  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-  background-attachment: inherit; /* Keeps the image fixed when scrolling */
+  background-repeat: no-repeat; /*image doesn't repeat */
+  background-attachment: inherit; /*image fixed when scrolling */
+  margin: 2%;
+  border: #e31010 solid;
 }
 .text {
   padding-top: 20px;
