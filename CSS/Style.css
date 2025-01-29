@@ -142,22 +142,29 @@ footer {
 }
 
 .container {
-    border-radius: 20px;
+    line-height: 3;
+    border-top-left-radius: 100px;
+    margin-left: 120px;
+    width: 75%;
+    background-color: #0a6375;
+
     color: white;
     text-transform: uppercase;
     font-style: italic;
     text-align: center;
+    border-bottom-right-radius: 100px;
 }
 
 #add {
     border-radius: 25px;
-    border: 4px solid green;
-    border-left-width: 20px;
     border-left: 10px solid red;
     border-top: 10px solid goldenrod;
     border-right: 10px solid magenta;
     border-bottom: 10px solid green;
+    border-left-width: 20px;
 }
+
+
 
 #FirstName {
     border-radius: 10px;
@@ -188,11 +195,13 @@ footer {
 }
 
 #button {
-    width: 90px;
+    width: 110px;
+    margin-bottom: 20px;
     height: 40px;
+    color: white;
     border-radius: 20px;
-    background-color: greenyellow;
-    box-shadow: 0 10 20px 0 orangered;
+    background-color: blue;
+
 }
 
 #button:hover {
@@ -206,10 +215,22 @@ footer {
     text-transform: uppercase;
 }
 
+.wrapper {
+    background-color: #356fab;
+    width: 80%;
+    border-radius: 45px;
+    margin: 50px auto;
+    padding: 20px;
+    height: 60vh;
+}
+
 table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
+    background-color: #333;
+    width: 70%;
+    margin: 20px;
+    padding-top: 30px;
+    margin-left: 100px;
+    border-collapse: separate;
     background-color: dodgerblue;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
