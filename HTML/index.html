@@ -5,24 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
+    <style>
+        /*internal style */
+        
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full height of the screen */
+            background-color: #f4f4f4;
+        }
+        
+        .custom-video {
+            width: 80%;
+            max-width: 800px;
+            border: 5px solid #333;
+            /* Adding a border */
+            border-radius: 10px;
+            /* Rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            /* Adding a shadow */
+        }
+        .multimedia h2{
+            font-size: 40px;
+        }
+        h1{
+            font-size: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <section>
-        <h1>Computer Science</h1>
+    <h1 style="text-align: center;color: red;background-color: aqua;">Student Information Regarding the Use of Our Lab</h1>
+    <!-- paragraph section -->
+   <section style="background-color: bisque; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-family: Arial, sans-serif; font-size: 1.1rem; color: #333; line-height: 1.6; text-align: justify; margin-bottom: 20px;">
+        Our computer lab is designed to empower every student in Information Systems, Information Technology, and Computer Science with hands-on experience and practical skills. Whether you're coding software, managing databases, exploring cybersecurity, or networking systems, 
+        the lab provides access to essential resources like high-performance computers, development tools, and cloud platforms. With expert guidance, collaborative projects, and cutting-edge technology, each student can innovate, experiment, 
+        and apply theoretical knowledge to real-world challenges, ensuring a strong foundation for future careers in the tech industry.
+    </p>
+</section>
+    <!-- Midea section -->
+    <section class="multimedia">
+        <h2 style="text-align: center;background-color: pink;color: blue;padding: 20px;">multimedia</h2>
+        <div class="video-container">
+            <video class="custom-video" controls>
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+       
     </section>
-    <section>
-        <h1>Information Tecnology</h1>
-    </section>
-    <section>
-        <h1>Information System</h1>
-    </section>
+
     <!-- formset section -->
-    <iframe src="Image/togther.jpg" frameborder="2" width="500px" height="500px"></iframe>
+   
+    <section>
+ <iframe src="Image/togther.jpg" frameborder="2" width="500px" height="500px"></iframe>
     <iframe src="https://www.evangadi.com" frameborder="0" width="750px" height="500px"></iframe>
     <iframe src="vidi" frameborder="0"></iframe>
-    <section>
-
     </section>
 
 </body>
