@@ -126,6 +126,11 @@ footer {
     margin: 15px;
     border: #e31010 solid;
     border-radius: 20px;
+    transition: transform 5s ease, box-shadow 0.3s ease;
+}
+
+#home:hover {
+    transform: translateY(48px) scale(1.2);
 }
 
 .text {
@@ -192,6 +197,12 @@ footer {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
+    transition: transform 3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+    width: 100%;
+    transform: translateY(48px) scale(1.2);
 }
 
 
