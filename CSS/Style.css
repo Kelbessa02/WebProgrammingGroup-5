@@ -41,30 +41,33 @@ header {
     size: 20px;
 }
 
-.logo-wrapper {
-    background-color: rgb(160, 216, 160);
+.internal-wrapper {
     display: flex;
-    padding-left: 30px;
-    padding-top: 15px;
+    justify-content: space-between;
+    background-color: rgb(54, 42, 42);
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.logo-wrapper {
+    display: flex;
+    width: 40%;
 }
 
 .logo-wrapper h1 {
-    color: rgb(187, 7, 7);
+    color: rgba(5, 250, 58, 0.979);
     font-style: italic;
-    font-size: 40px;
-    padding: 1px 0 10px 15px;
+    font-size: 25px;
 }
 
 .logo {
     width: 45px;
 }
 
-.internal-wrapper {
+.ul-wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(54, 42, 42);
-    padding: 25px;
-    margin-bottom: 10px;
 }
 
 .internal-wrapper li a {
@@ -307,12 +310,6 @@ footer {
     text-transform: capitalize;
 }
 
-
-
-
-
-
-
 .content {
     align-items: center;
     line-height: 1.5;
@@ -324,21 +321,17 @@ footer {
 .content h3 {
     font-size: 30px;
     text-align: center;
-
     color: rgb(227, 211, 211);
 }
 
 .content p {
-
     text-decoration: dotted;
     font-size: 15px;
     text-align: center;
-
 }
 
 .oa {
     text-align: center;
-
 }
 
 .container {
