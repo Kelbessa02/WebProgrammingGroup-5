@@ -291,6 +291,8 @@ footer {
 .goal-section {
     background-color: #a34678;
     margin: 20px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
 }
 
 .style {
@@ -305,6 +307,12 @@ footer {
     text-transform: capitalize;
 }
 
+
+
+
+
+
+
 .content {
     align-items: center;
     line-height: 1.5;
@@ -316,19 +324,21 @@ footer {
 .content h3 {
     font-size: 30px;
     text-align: center;
-    text-decoration: dotted;
+
     color: rgb(227, 211, 211);
 }
 
 .content p {
-    text-decoration-color: #f9f9f9;
+
     text-decoration: dotted;
     font-size: 15px;
     text-align: center;
+
 }
 
 .oa {
     text-align: center;
+
 }
 
 .container {
