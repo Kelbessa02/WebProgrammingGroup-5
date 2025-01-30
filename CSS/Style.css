@@ -126,6 +126,14 @@ footer {
     margin: 15px;
     border: #e31010 solid;
     border-radius: 20px;
+    transition: transform 5s ease, box-shadow 0.3s ease;
+}
+
+#home:hover {
+    transform: translateY(48px) scale(1.2);
+
+
+
 }
 
 .text {
@@ -184,6 +192,13 @@ footer {
     flex: 1 1 40%;
     padding: 50px;
     padding-left: 30px;
+    transition: transform 3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+    width: 55%;
+    transform: translateY(48px) scale(1.2);
+
 }
 
 .about-image img {
@@ -226,9 +241,11 @@ footer {
 
 /* Service Boxes */
 
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /*position styling*/
     gap: 1.5rem;
 }
 
