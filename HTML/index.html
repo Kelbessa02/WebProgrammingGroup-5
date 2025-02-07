@@ -35,6 +35,20 @@
         h1 {
             font-size: 100px;
         }
+        /* Flex container for proper display */
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            /* Centers the images */
+            align-items: center;
+            /* Aligns images vertically */
+            gap: 10px;
+            /* Adds space between images */
+            flex-wrap: wrap;
+            /* Ensures responsiveness */
+        }
+        /* Styling for images to be responsive */
     </style>
 </head>
 
@@ -82,10 +96,9 @@
 
     <!-- formset section -->
 
-    <section>
-        <iframe src="Image/togther.jpg" frameborder="2" width="500px" height="500px"></iframe>
-        <iframe src="Image/lab-Rule.jpg" frameborder="0" width="750px" height="500px"></iframe>
-        <iframe src="vidi" frameborder="0"></iframe>
+    <section class="image-container">
+        <iframe src="Image/dubbledesktop.jpg" frameborder="2" width="600" height="600"></iframe>
+        <iframe src="Image/lab-Rule.jpg" frameborder="0" width="600" height="600"></iframe>
     </section>
 </body>
 
