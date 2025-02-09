@@ -21,6 +21,9 @@
     
     h1 {
         font-size: 50px;
+        padding: 30px 0;
+        margin: 7px;
+        border-radius: 10px;
     }
     
     ol {
@@ -33,7 +36,7 @@
     
     .bg-color {
         background-color: rgb(34, 31, 31);
-        color: #fff;
+        color: #ffffff;
         margin: 5px;
     }
     
@@ -58,11 +61,11 @@
     }
     
     #about {
-        background-color: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.9);
         border: solid silver 3px;
         margin: 10px;
         padding: 30px;
-        color: rgb(117, 100, 100);
+        color: black;
     }
     
     #about p {
@@ -85,5 +88,7 @@
     }
     
     .multimedia h2 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         font-size: 40px;
     }
