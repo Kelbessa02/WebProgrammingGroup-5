@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="student.css">
+    <title>Student</title>
+    <style>
+        /*internal style */
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            /* Centers the images */
+            align-items: center;
+            /* Aligns images vertically */
+            gap: 10px;
+            /* Adds space between images */
+            flex-wrap: wrap;
+            /* Ensures responsiveness */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-color">
+
+        <ol>
+            <li>
+                <img src="Image/togther.jpg" alt="" style="width: 20px;border-radius: 80px;">
+                <a href="#">Logo</a>
+            </li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#iframe">Iframe</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#multimedia">multimedia</a>
+            </li>
+        </ol>
+    </header>
+    <h1 style="text-align: center; color: red; background-color: aqua">
+        Student Information Regarding the Use of Our Lab
+    </h1>
+    <!-- paragraph section -->
+
+    <section id="about">
+        <h2 style=" text-align: center; ; color: blue; padding: 20px; ">About Us</h2>
+
+        <p>Our networking systems, the lab provides access to essential resources like high-performance computers, development tools, and cloud platforms.With expert guidance, collaborative projects, and cutting-edge technology, each student can innovate,
+            experiment. Apply theoretical knowledge to real-world challenges, ensuring a strong foundation for future careers in the technology industry.</p>
+    </section>
+    <!-- Midea section -->
+    <section id="multimedia " class="multimedia ">
+        <h2 style=" text-align: center; background-color: pink; color: blue; padding: 20px; ">
+            multimedia
+        </h2>
+        <div class="video-container ">
+            <video class="custom-video " controls>
+          <source src="video/video.mp4 " type="video/mp4 " />
+          Your browser does not support the video tag.
+        </video>
+        </div>
+    </section>
+
+    <!-- formset section -->
+
+    <section id="iframe " class="image-container ">
+        <iframe src="Image/dubbledesktop.jpg " frameborder="2 " width="600 " height="600 "></iframe>
+        <iframe src="Image/lab-Rule.jpg " frameborder="0 " width="600 " height="600 "></iframe>
+    </section>
+    <footer class="bg-color ">
+        <p>© 2025 Student Website. All rights reserved. Designed by Student Team Privacy Policy</p>
+    </footer>
+</body>
+
+</html>
