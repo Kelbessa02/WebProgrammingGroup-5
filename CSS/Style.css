@@ -171,6 +171,12 @@ footer {
     border-radius: 12px;
     background-color: gainsboro;
 }
+.slogan{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+     color: rgb(50, 47, 255);
+}
 
 .about-content {
     flex: 1 1 60%;
