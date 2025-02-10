@@ -144,8 +144,15 @@ footer {
     justify-self: center;
 }
 
+.slogan{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+     color: rgb(50, 47, 255);
+}
+
 .home-section:hover {
-    /* transform: translateY(48px) scale(1.2); */
+    transform: translateY(48px) scale(1.2);
 }
 
 .text2 {
@@ -170,18 +177,14 @@ footer {
     margin: 15px;
     border-radius: 12px;
     background-color: gainsboro;
+     box-shadow: 7px 4px 8px 10px #fff; 
+     justify-self: center;
 }
-.slogan{
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-     color: rgb(50, 47, 255);
-}
-
 .about-content {
-    flex: 1 1 60%;
-    padding: 1rem;
+    flex: 1 1 50%;
+    padding: 3rem;
     margin-right: 100px;
+   box-shadow: 7px 4px 8px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .about-content h2 {
@@ -199,9 +202,8 @@ footer {
 }
 
 .about-image {
-    flex: 1 1 40%;
-    padding: 50px;
-    padding-left: 30px;
+    flex: 1 1 50%;
+    box-shadow: 7px 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-image img {
@@ -209,11 +211,13 @@ footer {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    transition: transform 3s ease, box-shadow 0.3s ease;
 }
 
 .about-image:hover {
+    width: 55%;
+    transform: translateY(48px) scale(1.2);
+}
+.about-content:hover {
     width: 55%;
     transform: translateY(48px) scale(1.2);
 }
@@ -331,7 +335,7 @@ footer {
     line-height: 1.2;
     font-family: 'Times New Roman', Times, serif;
     background: white;
-    padding: 2.1rem;
+    padding: 2.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 4px  8px 10px 8px rgba(0, 0, 0, 0.2);
