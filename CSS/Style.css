@@ -328,6 +328,16 @@ footer {
     transform: translateY(-30px);
     box-shadow: 4px  8px 10px 8px rgba(0, 0, 0, 0.2);
 }
+.achieve{
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+    background: white;
+    padding: 2.1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 4px  8px 10px 8px rgba(0, 0, 0, 0.2);
+
+}
 
 /* goals */
 .container {
