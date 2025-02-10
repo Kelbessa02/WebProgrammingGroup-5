@@ -314,7 +314,22 @@ footer {
     border-radius: 15px;
     height: 150hv;
 }
+.goal{ 
+    line-height: 1.2;
+    font-family: 'Times New Roman', Times, serif;
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+}
+.goal:hover{
+    transform: translateY(-30px);
+    box-shadow: 4px  8px 10px 8px rgba(0, 0, 0, 0.2);
+}
 
+/* goals */
 .container {
     line-height: 3;
     border-top-left-radius: 100px;
