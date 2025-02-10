@@ -301,47 +301,18 @@ footer {
 
 /*service section*/
 
-.goal-section {
-    background-color: #a34678;
-    margin: 20px;
-    border-top-left-radius: 70px;
-    border-bottom-right-radius: 70px;
-}
-
-.style {
-    color: black;
-    font-weight: bold;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 55px;
-    text-align: center;
-    font-style: normal;
-    margin-left: 100px;
-    width: 75%;
-    text-transform: capitalize;
-}
-
-.content {
+/*goal-achive*/
+.goal-achieve{
+    justify-content: center;
     align-items: center;
-    line-height: 1.5;
-    padding: 10px;
-    font-weight: 500;
-    font-size: 2rem;
-}
-
-.content h3 {
-    font-size: 30px;
-    text-align: center;
-    color: rgb(227, 211, 211);
-}
-
-.content p {
-    text-decoration: dotted;
-    font-size: 15px;
-    text-align: center;
-}
-
-.oa {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.65rem;
+    margin: 30px;
+    padding: 40px;
+    background-color: #ddd;
+    border-radius: 15px;
+    height: 150hv;
 }
 
 .container {
