@@ -118,6 +118,13 @@ footer {
 
 
 /*home*/
+.home-section{
+   box-shadow: 7px 4px 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: transform 5s ease, box-shadow 0.3s ease;
+    margin: 15px;
+   
+}
 
 #home {
     background-image: url(../image/banner.jpg);
@@ -133,28 +140,19 @@ footer {
     /*image doesn't repeat */
     background-attachment: inherit;
     /*image fixed when scrolling */
-    margin: 15px;
-    border: #e31010 solid;
-    border-radius: 20px;
-    transition: transform 5s ease, box-shadow 0.3s ease;
+    margin-bottom: 5px; 
+    justify-self: center;
 }
 
-#home:hover {
-    transform: translateY(48px) scale(1.2);
-}
-
-.text {
-    padding-top: 20px;
-    text-align: center;
-    font-size: 100px;
-    color: #003366;
+.home-section:hover {
+    /* transform: translateY(48px) scale(1.2); */
 }
 
 .text2 {
     font-weight: bold;
     text-align: center;
     font-size: 50px;
-    color: rgb(210, 247, 6);
+    color: rgb(9, 9, 9);
 }
 
 
