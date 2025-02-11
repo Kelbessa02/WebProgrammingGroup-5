@@ -36,6 +36,11 @@
     }
     /* header */
     
+    header {
+        position: sticky;
+        top: 0;
+    }
+    
     .bg-color {
         background-color: rgb(34, 31, 31);
         color: #ffffff;
