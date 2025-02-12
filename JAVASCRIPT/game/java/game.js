@@ -25,7 +25,7 @@ function loadLevel1() {
         return;
     }
 
-    document.getElementById("progress").textContent = ${currentQuestion}/10;
+    document.getElementById("progress").textContent = `${currentQuestion}/10`;
     let question = parts[currentQuestion];
 
     document.getElementById("level1-image").src = question.image;
@@ -115,6 +115,7 @@ function getRandomImages(correctImage) {
     let images = [correctImage, ...wrongImages];
     return images.sort(() => Math.random() - 0.5);
 }
+
 // Check Level 2 Answer
 function checkLevel2Answer(img) {
     let correctImage = parts[currentQuestion].image;
