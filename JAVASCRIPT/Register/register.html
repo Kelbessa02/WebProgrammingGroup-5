@@ -4,46 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
-
     <div class="container">
-        <h2>Registration Form</h2>
+        <header>
+            <img src="image/logo.jpg" alt="logo" class="logo">
+        </header>
         <form id="registrationForm">
-            <div class="form-group">
+            <input type="text" id="name" placeholder="Enter name" required>
+            <input type="email" id="email" placeholder="Enter email" required>
+            <input type="password" id="password" placeholder="Enter password" required>
 
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
-                <div id="fullnameError" class="error"></div>
+            <input type="tel" id="phone" placeholder="Enter phone number" required>
+            <div class="terms">
+                <input type="checkbox" id="terms" required style="width: 10%;margin-left: 150px ;">
+                <label for="terms" style="width: 90%;margin-right: 200px;">I agree to the terms and conditions</label>
             </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <div id="emailError" class="error"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <div id="passwordError" class="error"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <div id="phoneError" class="error"></div>
-            </div>
-
-            <div class="form-group">
-                <input type="checkbox" id="terms" name="terms">
-                <label for="terms">I agree to the terms and conditions</label>
-                <div id="termsError" class="error"></div>
-            </div>
-
             <button type="submit">Register</button>
         </form>
     </div>
