@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the Computer Part</title>
-    <link rel="stylesheet" href="css/game.css">
-</head>
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
 
-<body>
+  <body>
     <h1>Guess the Computer Part</h1>
     <p>Level: <span id="level">1</span></p>
-    <p> <span id="progress"></span></p>
+    <p><span id="progress"></span></p>
 
     <!-- Level 1: Choice-Based -->
     <div id="level1" class="level-container">
-        <p>What is the name of this computer part?</p>
-        <div class="image-container">
-            <img id="level1-image" src="" alt="Computer Part">
-        </div>
-        <button id="option1" onclick="checkLevel1Answer(this)"></button>
-        <button id="option2" onclick="checkLevel1Answer(this)"></button>
-        <button id="option3" onclick="checkLevel1Answer(this)"></button>
+      <p>What is the name of this computer part?</p>
+      <div class="image-container">
+        <img id="level1-image" src="" alt="Computer Part" />
+      </div>
+      <button id="option1" onclick="checkLevel1Answer(this)"></button>
+      <button id="option2" onclick="checkLevel1Answer(this)"></button>
+      <button id="option3" onclick="checkLevel1Answer(this)"></button>
     </div>
 
     <!-- Level 2: Image-Based -->
-    <div id="level2" class="level-container" style="display: none;">
-        <p>Select the correct image for: <span id="level2-name"></span></p>
-        <div class="image-container">
-            <img id="image1" onclick="checkLevel2Answer(this)" src="" alt="Option 1">
-            <img id="image2" onclick="checkLevel2Answer(this)" src="" alt="Option 2">
-            <img id="image3" onclick="checkLevel2Answer(this)" src="" alt="Option 3">
-        </div>
+    <div id="level2" class="level-container" style="display: none">
+      <p>Select the correct image for: <span id="level2-name"></span></p>
+      <div class="image-container">
+        <img
+          id="image1"
+          onclick="checkLevel2Answer(this)"
+          src=""
+          alt="Option 1"
+        />
+        <img
+          id="image2"
+          onclick="checkLevel2Answer(this)"
+          src=""
+          alt="Option 2"
+        />
+        <img
+          id="image3"
+          onclick="checkLevel2Answer(this)"
+          src=""
+          alt="Option 3"
+        />
+      </div>
     </div>
 
     <!-- Congratulations Message -->
-    <div id="congrats" class="level-container" style="display: none;">
-        <h2> Congratulations! 👏</h2>
-        <p id="congrats-message"></p>
-        <button id="next-level-btn" onclick="loadLevel2()" style="display: none;">Go to Next Level</button>
+    <div id="congrats" class="level-container" style="display: none">
+      <h2>Congratulations! 👏</h2>
+      <p id="congrats-message"></p>
+      <button id="next-level-btn" onclick="loadLevel2()" style="display: none">
+        Go to Next Level
+      </button>
     </div>
 
     <p id="message"></p>
     <button onclick="resetGame()">Restart Game</button>
 
-    <script src="js/game.js"></script>
-</body>
-
+    <script src="java/game.js"></script>
+  </body>
 </html>
