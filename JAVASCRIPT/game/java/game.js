@@ -25,7 +25,7 @@ function loadLevel1() {
         return;
     }
 
-    document.getElementById("progress").textContent = `${currentQuestion}/10`;
+    document.getElementById("progress").textContent = `${currentQuestion}`;
     let question = parts[currentQuestion];
 
     document.getElementById("level1-image").src = question.image;
