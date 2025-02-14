@@ -56,6 +56,7 @@ console.log("Multi-Dimensional Array:", multiArray);
 console.log("First Person's Name:", multiArray[0][0]);
 console.log("Second Person's Age:", multiArray[1][1]);
 
+//addsu task
 // // general console
 document.getElementById("registrationForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -80,7 +81,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
     if (name && email && phone && termsAccepted) {
         alert("Welcome to our website!" + "../../Web Folder/index.html");
-        window.location.href = "../../Web Folder/index.html";
+        window.location.href = "../../Web Folder/index.html"; //to be display our webisit
     } else {
         alert("Please fill in all fields and accept the terms.");
     }

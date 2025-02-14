@@ -74,6 +74,7 @@ function showCongratulations(level) {
         document.getElementById("congrats-message").textContent = "Congratulations! 👑You've completed the game!";
         document.getElementById("next-level-btn").style.display = "none";
     }
+
 }
 
 // Load Level 2
@@ -84,6 +85,7 @@ function loadLevel2() {
     document.getElementById("level").textContent = "2";
     currentQuestion = 0;
     loadLevel2Question();
+
 }
 
 // Load a Level 2 Question
