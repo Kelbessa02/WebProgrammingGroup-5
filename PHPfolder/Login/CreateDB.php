@@ -12,6 +12,12 @@ die("Connection failed: " . $conn->connect_error);
 } 
 //$sql = "DROP database Group5DB";
 //$sql = "create database Group5DB";
+$sql = "CREATE TABLE Register(Id Varchar(30) primary key,
+                               Fname Varchar(30) NOT NULL,
+                               Lname Varchar(30) NOT NULL,
+                               Sex Varchar(6) NOT NULL,
+                               Email Varchar(30) NOT NULL,
+                               password Varchar(30) NOT NULL )";
 //$sql = "create table Student(
     // Id int(6) unsigned auto_increment primary key,
     // Fname Varchar(30)not null,   
@@ -21,12 +27,12 @@ die("Connection failed: " . $conn->connect_error);
     // Password Varchar(50) not null
     // )";
     // $sql = "drop table student";
-   $sql ="insert into Student(Fname,Lname, Sex, password, Email) values('Kelbe','Adugna','Male', '1q2w3e', 'kelbessaadugna@gmail.com')";
+   //$sql ="insert into Student(Fname,Lname, Sex, password, Email) values('Kelbe','Adugna','Male', '1q2w3e', 'kelbessaadugna@gmail.com')";
 
 
     
 if(mysqli_query($conn,$sql)){
-    echo "data is added succesfully";
+    echo "table is added succesfully";
 }else{
 echo "Error craeting database".mysqli_error($conn);
 }
