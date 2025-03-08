@@ -1,12 +1,19 @@
 <?php
+// Set up database credentials 
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "Group5DB";
 
+// Create a connection 
+$conn= new mysqli($servername, $username, $password,$dbname); 
 
 // Prepare the SQL statement
 $sql = "Insert into Student(Fname, Lname, Sex,Email,  password) VALUES(?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);//those querry is used to take many input at a time
 
 // Bind parameters
-$stmt->bind_param("sssss", $Fname, $Lname, $Sex,$password,$Email);
+$stmt->bind_param("sssss", $Fname, $Lname, $Sex,$Email,$password);
 
 // Set parameters and execute
 $Fname = "Sena";
