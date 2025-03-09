@@ -6,7 +6,19 @@
     <title>home page</title>
 </head>
 <body>
-    <a href="LoginForm.php" style="text-decoration: none;text-align:right;display:block;">Logout</a>
-    <h1 style="text-align: center;border-bottom:4px solid blueviolet; color: blueviolet;  opacity:0.6 ;  margin-bottom: 0;  font-style: italic; ">WEL COME TO OUR HOME PAGE</h1>
+    <div>
+<div class="logo">
+
+</div>
+<header>
+<ul>
+    <li><a href="DisplayOnbrowser.php">Your Data</a></li>
+    <li><a href="LoginForm.php">Login</a></li>
+    <li><a href="LoginForm.php">Logout</a></li>
+    <li><a href="SignupForm.php">Signup</a></li>
+    <li><a href="#Home">Home</a></li>
+</ul>
+</header>
+    </div>
 </body>
 </html>

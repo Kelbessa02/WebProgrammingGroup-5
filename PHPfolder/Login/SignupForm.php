@@ -1,127 +1,118 @@
-<?php 
-$Fname= "";
-$Lname= "";
-$email = "";
-$Sex ="";
-$pass1 = "";
-$pass2 ="";
+<?php
+$Fname = $Lname = $email = $Sex = $pass1 = $pass2 = "";
 $err = array();
-$congra ="";
+$congra = "";
 
-//db connection
-$conn = mysqli_connect("localhost","root", "","Group5DB");
+// Database connection
+$conn = mysqli_connect("localhost", "root", "", "group5db");
 
-// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-if(isset($_POST['SIGNUP'])){
+if (isset($_POST['SIGNUP'])) {
 
-    $Fname= mysqli_real_escape_string($conn,$_POST['Fname']);
-    $Lname=  mysqli_real_escape_string($conn,$_POST['Lname']);
-    $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $Sex = mysqli_real_escape_string($conn,$_POST['Sex']);
-    $pass1 = mysqli_real_escape_string($conn,$_POST['pass1']);
-    $pass2 = mysqli_real_escape_string($conn,$_POST['pass2']);
+    $Fname = mysqli_real_escape_string($conn, $_POST['firstname']);
+    $Lname = mysqli_real_escape_string($conn, $_POST['lastname']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $Sex = mysqli_real_escape_string($conn, $_POST['gender']);
+    $pass1 = mysqli_real_escape_string($conn, $_POST['pass1']);
+    $pass2 = mysqli_real_escape_string($conn, $_POST['pass2']);
 
-    //validation 
-    if($pass1 != $pass2){
-        array_push($err, "The two passwords do not match");   
+    // Validation
+    if (empty($Fname)) { // Fixed: Added missing closing parenthesis
+        array_push($err, "First name is required");
+    } elseif (!preg_match("/^[a-zA-Z]+$/", $Fname)) {
+        $err="First name must contain only letters";
     }
 
-    $Register_check_query = "SELECT * FROM Register WHERE Fname='$Fname' OR Email='$email' LIMIT 1";
-    $result = mysqli_query($conn, $Register_check_query);
-    $Register = mysqli_fetch_assoc($result);
-    
-    if($Register){
-        if($Register['Fname'] === $Fname){
-            array_push($err, "Username already exists!");
+    if (empty($Lname)) {
+        array_push($err, "Last name is required");
+    } elseif (!preg_match("/^[a-zA-Z]+$/", $Lname)) {
+        $err="Last name must contain only letters";
+    }
+
+    if (empty($email)) {
+        $err ="Email is required";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $err= "Invalid email format";
+    }
+
+    if (empty($pass1)) {
+       $err="Password is required";
+    } elseif (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/", $pass1)) {
+        $err = "Password must contain at least one letter, one number, and one special character";
+    }
+
+    if ($pass1 !== $pass2) {
+        $err= "The two passwords do not match";
+    }
+
+    // Check if email or username exists
+    $student_check_query = "SELECT * FROM student WHERE Fname='$Fname' OR Email='$email' LIMIT 1";
+    $result = mysqli_query($conn, $student_check_query);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user) {
+        if ($user['Fname'] === $Fname) {
+            $err= "Username already exists!";
         }
-        if($Register['Email'] === $email){
-            array_push($err, "Email already exists");
+        if ($user['Email'] === $email) {
+            $err= "Email already exists";
         }
     }
 
-    //finally register
-    if(count($err) === 0){
-        $pass1 === $pass1; 
-        $query = "INSERT INTO Register(Fname, Lname, Sex, Email, Password) VALUES('$Fname','$Lname','$Sex', '$email', '$pass1')";
-        if(mysqli_query($conn, $query)){
-            $congra = "You are registered successfully. Please LOGIN now.";
+    // If no errors, proceed with registration
+
+        $stmt = $conn->prepare("INSERT INTO student (Fname, Lname, Sex, Email, Password) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $Fname, $Lname, $Sex, $email, $pass1);
+
+        if ($stmt->execute()) {
+            $err = "You are registered successfully. Please LOGIN now.";
         } else {
-            array_push($err, "Error: " . mysqli_error($conn));
+          $err= "Error: " . mysqli_error($conn);
         }
+
+        $stmt->close();
     }
-}
-?>
-
-<?php
-$Fname = "";
-$password = "";
-$err ="";
- //database connection
- $conn = mysqli_connect("localhost", "root",
- "","db");
-
- if(isset($_POST['LOGIN'])){
-    $Fname = mysqli_real_escape_string($conn, $_POST['Fname']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-    $sql ="select * from Student where Fname ='".$Fname."' and password = '".$password."' limit 1";
-    $result = mysqli_query($conn, $sql);
-
-    if (empty($Fname)){
-        $err = "username is mandatory";
-    }elseif(empty($password)){
-        $err = "password is required"; 
-    
-    }elseif(mysqli_num_rows($result) ==1){
-        header('location: home.php');
-    }else{
-        $err = "username or not is incorrect";
-    }
- }
 
 ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup System</title>
-    <link rel="stylesheet" href="css/SignupStyle.css">
+    <title>Register System</title>
+    <link rel="stylesheet" href="Css/SignupStyle.css">
 </head>
 <body>
-    <div class="box1">
+  
+    <div class="box2">
         <h1>Signup Here</h1>
         <div class="err">
-            <?php 
-            if (!empty($err)) {
+            <?php
+            if (!empty($err) && is_array($err)) { // Check if $err is an array
                 foreach ($err as $error) {
                     echo "<p>$error</p>";
                 }
             }
-            echo $congra;
             ?>
+            
         </div>
-        <form action="Signup.php" method="post">
-            <input type="text" name="Fname" placeholder="Please enter First Name" required>
-            <input type="text" name="Lname" placeholder="Please enter Last Name" required>
-            <input type="email" name="email" placeholder="Please enter your Email" required>
-             <label for="Sex">Sex:</label>
-            <input type="checkbox" name="Sex" value="Sex">Male
-            <input type="checkbox" name="Sex" value="Sex">Female
-            <input type="password" name="pass1" placeholder="Please enter your password" required>
-            <input type="password" name="pass2" placeholder="Please confirm your password" required>
+        <form action="SignupForm.php" method="post">
+            <input type="text" name="firstname" placeholder="Enter firstname" required>
+            <input type="text" name="lastname" placeholder="Enter lastname" required>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <label style="display: flex;">
+                Gender:
+                <input type="radio" name="gender" value="Male" required>Male
+                <input type="radio" name="gender" value="Female" required>Female
+            </label>
+            <input type="password" name="pass1" placeholder="Enter password" required>
+            <input type="password" name="pass2" placeholder="Confirm password" required>
             <input type="submit" value="SIGNUP" name="SIGNUP">
-            Already a Member? <a href="LoginForm.php" style="color: #ffc107;">LOGIN</a>
+            Already a member? <a href="LoginForm.php" style="color:#ffc107">LOGIN</a>
         </form>
-    </div>
+    </div> 
 </body>
 </html>
