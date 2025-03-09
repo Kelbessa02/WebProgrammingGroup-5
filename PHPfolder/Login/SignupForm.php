@@ -56,6 +56,39 @@ if(isset($_POST['SIGNUP'])){
 }
 ?>
 
+<?php
+$Fname = "";
+$password = "";
+$err ="";
+ //database connection
+ $conn = mysqli_connect("localhost", "root",
+ "","db");
+
+ if(isset($_POST['LOGIN'])){
+    $Fname = mysqli_real_escape_string($conn, $_POST['Fname']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $sql ="select * from Student where Fname ='".$Fname."' and password = '".$password."' limit 1";
+    $result = mysqli_query($conn, $sql);
+
+    if (empty($Fname)){
+        $err = "username is mandatory";
+    }elseif(empty($password)){
+        $err = "password is required"; 
+    
+    }elseif(mysqli_num_rows($result) ==1){
+        header('location: home.php');
+    }else{
+        $err = "username or not is incorrect";
+    }
+ }
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
