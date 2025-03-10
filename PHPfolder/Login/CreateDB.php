@@ -12,7 +12,7 @@ die("Connection failed: " . $conn->connect_error);
 } 
 //$sql = "DROP database Group5DB";
 //$sql = "create database Group5DB";
-$sql = "CREATE TABLE Register(Id Varchar(30) primary key,
+$sql = "CREATE TABLE Register(Id int(6) unsigned auto_increment primary key,
                                Fname Varchar(30) NOT NULL,
                                Lname Varchar(30) NOT NULL,
                                Sex Varchar(6) NOT NULL,

@@ -9,7 +9,7 @@ $err ="";
  if(isset($_POST['LOGIN'])){
     $Fname = mysqli_real_escape_string($conn, $_POST['Fname']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-    $sql ="select * from Student where Fname ='".$Fname."' and password = '".$password."' limit 1";
+    $sql =" SELECT  * FROM Register WHERE Fname ='".$Fname."' and password = '".$password."' limit 1";
     $result = mysqli_query($conn, $sql);
 
     if (empty($Fname)){
