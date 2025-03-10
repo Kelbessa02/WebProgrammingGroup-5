@@ -63,7 +63,7 @@
                     error: function(xhr, status, error) {
                         // Handle errors
                         $('#ajax-content').html('<p>Error loading data.</p>');
-                        console.error(error);
+                        console.error(Loading);
                     }
                 });
             });

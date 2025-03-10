@@ -75,3 +75,10 @@ footer{
     margin-top: 2px;
     margin-bottom: 1px;
 }
+.load-data{
+    background-color: #ff7200;
+}
+.load-data:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
