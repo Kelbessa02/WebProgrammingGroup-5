@@ -18,7 +18,7 @@
            <li><a href="DisplayOnbrowser.php">Your Data</a></li>
            <li><a href="LoginForm.php">Logout</a></li>
            <li><a href="SignupForm.php">Signup</a></li>
-          <li><a href="Web Folder\index.html">Home</a></li>
+          <li><a href="../../Web Folder/index.html">Home</a></li>
           <li><a href="Update.php">Update</a></li>
         </ul>
       </header>

@@ -10,24 +10,24 @@ $conn= new mysqli($servername, $username, $password,$dbname );
 if ($conn->connect_error) { 
 die("Connection failed: " . $conn->connect_error); 
 } 
-//$sql = "DROP database Group5DB";
-//$sql = "create database Group5DB";
+
+$sql = "create database Group5DB";
 $sql = "CREATE TABLE Register(Id int(6) unsigned auto_increment primary key,
                                Fname Varchar(30) NOT NULL,
                                Lname Varchar(30) NOT NULL,
                                Sex Varchar(6) NOT NULL,
                                Email Varchar(30) NOT NULL,
                                password Varchar(30) NOT NULL )";
-//$sql = "create table Student(
-    // Id int(6) unsigned auto_increment primary key,
-    // Fname Varchar(30)not null,   
-    // Lname varchar (30),
-    // Sex varchar(5) not null,
-    // Email varchar(50) not null,
-    // Password Varchar(50) not null
-    // )";
-    // $sql = "drop table student";
-   //$sql ="insert into Student(Fname,Lname, Sex, password, Email) values('Kelbe','Adugna','Male', '1q2w3e', 'kelbessaadugna@gmail.com')";
+$sql = "create table Student(
+    Id int(6) unsigned auto_increment primary key,
+    Fname Varchar(30)not null,   
+    Lname varchar (30),
+    Sex varchar(5) not null,
+    Email varchar(50) not null,
+    Password Varchar(50) not null
+    )";
+   
+   $sql ="insert into Student(Fname,Lname, Sex, password, Email) values('Kelbe','Adugna','Male', '1q2w3e', 'kelbessaadugna@gmail.com')";
 
 
     

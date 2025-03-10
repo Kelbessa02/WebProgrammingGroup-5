@@ -1,0 +1,19 @@
+.update{
+    background-image: url(./Image/ub.jpg);
+    height: 500px;
+    color: #ff720f;
+    font-size: 25px;
+}
+
+.update .update-form {
+    text-align: center;
+    padding-top: 40px;
+}
+.btn{
+    background: aqua;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #ff720f;
+    color: aquamarine;
+}
